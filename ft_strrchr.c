@@ -6,7 +6,7 @@
 /*   By: abrun <abrun@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 12:39:15 by abrun             #+#    #+#             */
-/*   Updated: 2020/11/19 15:15:02 by abrun            ###   ########.fr       */
+/*   Updated: 2021/10/27 19:08:10 by abrun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,12 @@ char	*ft_strrchr(const char *s, int c)
 	if (s[len] == c)
 		return ((char *)s + len);
 	return (NULL);
+}
+
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	char	s[] = {"hello"};
+	printf("moi : %s\n", ft_strrchr(s, 0));
+	printf("moi : %s\n", strrchr(s, 0));
 }
